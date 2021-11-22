@@ -1,8 +1,9 @@
 import express from "express";
 import path from "path";
 
+// setze den port auf process.env.PORT oder 3001
 const app = express();
-const port = 3003;
+const port = process.env.PORT || 3003;
 
 // API routes
 app.get("/api/test", (_request, response) => {
