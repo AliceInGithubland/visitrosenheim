@@ -9,6 +9,7 @@
     "build-client": "tsc && vite build",
     "build-server": "tsc --project server/tsconfig.json",
     "build-storybook": "build-storybook -o dist/storybook",
+    "storybook": "start-storybook -p 6006",
     "serve": "vite preview",
     "lint": "stylelint \"**/*.css\" && eslint . && prettier . --check",
     "prepare": "husky install",
@@ -18,7 +19,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "react-dom": "^17.0.0",
+    "storybook": "^6.3.12"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
