@@ -1,0 +1,4 @@
+.mainContainer {
+  background-color: var(--primary-background-color);
+  background-image: url("src/assets/landingpage_visitrosenheim.jpeg");
+}
