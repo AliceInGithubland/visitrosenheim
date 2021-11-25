@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,300;1,400&display=swap");
+
 *,
 *::before,
 *::after {
@@ -6,20 +8,20 @@
 
 body {
   margin: 0;
-  font-size: 1;
+  width: 100vh;
 }
 
 :root {
   /* colors */
   --primary-background-color: #e5e5e5;
   --primary-text-color: black;
-  --primary-font: "Roboto";
+  --primary-font: "Roboto", sans-serif;
   --color-tabs: #a0aff4;
   --color-tab-bucketlist: #d2c099;
   --color-button-covid: #d98d89;
 
   /* fonts */
-  --font-text: "Roboto";
+  --font-text: "Roboto", sans-serif;
   --font-size-primary: 48px;
   --font-size-secondary: 25px;
   --font-size-tabsbuttons: 18px;
