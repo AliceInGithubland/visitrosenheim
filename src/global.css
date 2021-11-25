@@ -9,18 +9,6 @@ body {
   font-size: 1;
 }
 
-h1 {
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: 2.2rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
 :root {
   /* colors */
   --primary-background-color: #e5e5e5;
