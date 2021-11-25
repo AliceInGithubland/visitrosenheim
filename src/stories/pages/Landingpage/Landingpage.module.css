@@ -1,4 +1,29 @@
-.mainContainer {
-  background-color: var(--primary-background-color);
+.main {
+  display: grid;
+  grid-template-rows: 30% 70%;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  bottom: 0;
+}
+
+.headerContainer {
+  display: grid;
+  place-items: left;
+}
+
+.imageContainer {
   background-image: url("src/assets/landingpage_visitrosenheim.jpeg");
+  font-family: var(--font-text);
+  max-width: 100%;
+  height: auto;
+  opacity: 0.5;
+  font-size: var(--font-size-primary);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  font-family: var(--font-text);
+  font-size: var(--font-size-primary);
 }
