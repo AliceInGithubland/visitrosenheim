@@ -16,6 +16,24 @@ export default function Button() {
         />
         <p className={styles.textRestaurant}>Restaurant</p>
       </button>
+
+      <button type="button" className={styles.activitiesButton}>
+        <img
+          className={styles.activitiesIcon}
+          src="src/assets/ticket_icon.png"
+        />
+        <p className={styles.textActivities}>Activities</p>
+      </button>
+
+      <button type="button" className={styles.hotelsButton}>
+        <img className={styles.hotelsIcon} src="src/assets/hotels_icon.png" />
+        <p className={styles.textHotels}>Hotels</p>
+      </button>
+
+      <button type="button" className={styles.retailButton}>
+        <img className={styles.retailIcon} src="src/assets/retail_icon.png" />
+        <p className={styles.textRetail}>Retail</p>
+      </button>
     </div>
   );
 }
