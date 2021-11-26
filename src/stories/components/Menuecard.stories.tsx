@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./Button";
+import Button from "./Menuecard";
 
 export default {
   component: Button,

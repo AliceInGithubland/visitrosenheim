@@ -1,0 +1,39 @@
+.cafeButton {
+  display: grid;
+  place-items: center;
+  grid-template-rows: 1fr 1fr;
+  width: 150px;
+  height: 150px;
+  border-radius: 30%;
+  background-color: var(--color-tabs);
+  font-size: var(--font-size-tabsbuttons);
+  text-transform: uppercase;
+}
+
+.restaurantButton {
+  display: grid;
+  place-items: center;
+  grid-template-rows: 1fr 1fr;
+  width: 150px;
+  height: 150px;
+  border-radius: 30%;
+  background-color: var(--color-tabs);
+  font-size: var(--font-size-tabsbuttons);
+  text-transform: uppercase;
+}
+
+.cafeIcon {
+  padding-top: 2rem;
+}
+
+.restaurantIcon {
+  padding-top: 2rem;
+}
+
+.textCafe {
+  padding-top: 1rem;
+}
+
+.textRestaurant {
+  padding-top: 1rem;
+}
