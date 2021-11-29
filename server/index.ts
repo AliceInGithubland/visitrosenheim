@@ -1,9 +1,16 @@
+import dotenv from "dotenv";
+dotenv.config();
 import express from "express";
-import path from "path";
+import { connectDatabase } from "./database";
+
+if (!process.env.MONGODB_URI) {
+  throw new Error("No MongoDB URL dotenv variable");
+}
 
 // setze den port auf process.env.PORT oder 3001
 const app = express();
 const port = process.env.PORT || 3003;
+app.use(express.json());
 
 // API routes
 app.get("/api/test", (_request, response) => {
@@ -13,11 +20,8 @@ app.get("/api/test", (_request, response) => {
 // serve production bundle of app and storybook
 app.use(express.static("dist"));
 
-// send all other requests to the app
-app.get("*", (_request, response) => {
-  response.sendFile(path.join(__dirname, "../dist/index.html"));
-});
-
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
-});
+connectDatabase(process.env.MONGODB_URI).then(() =>
+  app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`);
+  })
+);
