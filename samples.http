@@ -1,0 +1,14 @@
+### GET all entries
+GET http://localhost:3003/api/cafeLocations HTTP/1.1
+
+###POST an entry
+POST http://localhost:3003/api/cafeLocations HTTP/1.1
+Content-Type: application/json
+
+{
+    "image": "content tbd",
+    "date": "2021-11-30",
+    "title": "MongoDB day",
+    "text": "testing the best database ever"
+}
+
