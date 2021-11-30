@@ -4,7 +4,7 @@
   column-gap: 1.5em;
   height: 3em;
   width: 11em;
-  border-radius: 30px;
+  border-radius: 1.875em;
   background-color: var(--color-button-covid);
   font-size: var(--font-size-tabsbuttons);
   text-transform: uppercase;
