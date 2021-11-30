@@ -1,0 +1,32 @@
+.container {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  gap: 1em;
+  background-image: url("src/assets/backgroundimg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3rem 2rem;
+  height: 100%;
+}
+
+.link {
+  display: grid;
+  place-items: center;
+  background-color: var(--color-tabs);
+  border-radius: 30px;
+  width: 8em;
+  height: 8em;
+  align-content: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.bucketlist {
+  background-color: var(--color-tab-bucketlist);
+}
+
+.covid {
+  grid-column: span 2;
+  justify-self: center;
+}

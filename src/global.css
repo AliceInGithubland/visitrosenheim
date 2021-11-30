@@ -8,7 +8,6 @@
 
 body {
   margin: 0;
-  width: 100vh;
 }
 
 :root {
@@ -16,14 +15,25 @@ body {
   --primary-background-color: #e5e5e5;
   --primary-text-color: black;
   --primary-font: "Roboto", sans-serif;
-  --color-tabs: #a0aff4;
-  --color-tab-bucketlist: #d2c099;
-  --color-button-covid: #d98d89;
+  --color-tabs: rgb(123 104 238 / 50%);
+  --color-tab-bucketlist: rgb(255 218 185 / 50%);
+  --color-button-covid: rgb(250 128 114 / 50%);
 
   /* fonts */
   --font-text: "Roboto", sans-serif;
-  --font-size-primary: 48px;
-  --font-size-secondary: 25px;
+  --font-size-primary: 60px;
+  --font-size-secondary: 12px;
   --font-size-tabsbuttons: 18px;
-  --font-size-locationinfos: 18px;
+  --font-size-locationinfos: 8px;
+}
+
+a {
+  font-family: var(--font-text);
+  text-decoration: none;
+}
+
+h1 {
+  font-size: var(--font-size-primary);
+  text-transform: uppercase;
+  font-family: var(--font-text);
 }
