@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./Covid.module.css";
 
-type CovidProps = {
+type CovidLink = {
   className?: string;
 };
 
-export default function Covid({ className }: CovidProps) {
+export default function Covid({ className }: CovidLink) {
   return (
     <a className={`${styles.covid} ${className}`}>
       <p>Covid-19</p>
