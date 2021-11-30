@@ -2,9 +2,13 @@ import React from "react";
 import Covid from "../Covid/Covid";
 import styles from "./Menuecard.module.css";
 
-export default function Menuecard() {
+type MenuecardProps = {
+  className?: string;
+};
+
+export default function Menuecard({ className }: MenuecardProps) {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${className}`}>
       <a className={styles.link}>
         <img src="src/assets/Cafe_Icon.svg" />
         <p>Cafés</p>

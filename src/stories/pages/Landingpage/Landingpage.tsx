@@ -6,9 +6,7 @@ export default function Landingpage() {
   return (
     <div className={styles.container}>
       <h1>Visit Rosenheim</h1>
-      <div className={styles.menuecard}>
-        <Menuecard />
-      </div>
+      <Menuecard />
     </div>
   );
 }

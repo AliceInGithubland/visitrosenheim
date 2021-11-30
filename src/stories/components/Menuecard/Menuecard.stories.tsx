@@ -1,12 +1,12 @@
 import React from "react";
-import Button from "./Menuecard";
+import Menuecard from "./Menuecard";
 
 export default {
-  component: Button,
+  component: Menuecard,
   title: "Components/Menuecard",
   parameters: {
     layout: "fullscreen",
   },
 };
 
-export const Default = () => <Button />;
+export const Default = () => <Menuecard />;
