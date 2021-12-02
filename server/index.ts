@@ -1,6 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 import express from "express";
+import path from "path";
 import { connectDatabase, getCafeLocationCollection } from "./database";
 
 if (!process.env.MONGODB_URI) {
@@ -32,6 +33,11 @@ app.post("/api/cafeLocations", async (request, response) => {
   const newLocation = request.body;
   await cafeLocation.insertOne(newLocation);
   response.send(newLocation);
+});
+
+// send all other requests to the app
+app.get("*", (_request, response) => {
+  response.sendFile(path.join(__dirname, "../dist/index.html"));
 });
 
 connectDatabase(process.env.MONGODB_URI).then(() =>
