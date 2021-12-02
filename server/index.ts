@@ -30,10 +30,8 @@ app.get("/api/cafeLocations", async (_request, response) => {
 app.post("/api/cafeLocations", async (request, response) => {
   const cafeLocation = getCafeLocationCollection();
   const newLocation = request.body;
-  if (newLocation) {
-    await cafeLocation.insertOne(newLocation);
-    response.send(newLocation);
-  }
+  await cafeLocation.insertOne(newLocation);
+  response.send(newLocation);
 });
 
 connectDatabase(process.env.MONGODB_URI).then(() =>
