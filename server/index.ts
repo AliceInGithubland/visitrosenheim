@@ -2,7 +2,6 @@ import dotenv from "dotenv";
 dotenv.config();
 import express from "express";
 import path from "path";
-import { cafeLocation } from "./utils/cafeLocationContent.json";
 import { connectDatabase, getCafeLocationCollection } from "./database";
 
 if (!process.env.MONGODB_URI) {
