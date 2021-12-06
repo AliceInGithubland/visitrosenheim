@@ -7,12 +7,12 @@ export default function Map() {
   return (
     <MapContainer
       className={styles.map}
-      center={[47.85637, -0.09]}
+      center={[47.85637, 12.1181]}
       zoom={13}
       scrollWheelZoom={false}
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-      <Marker position={[47.85637, -0.09]}>
+      <Marker position={[47.856769, 12.127801]}>
         <Popup>
           Visit Rosenheim <br />
         </Popup>
