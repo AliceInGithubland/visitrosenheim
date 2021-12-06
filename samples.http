@@ -10,6 +10,8 @@ Content-Type: application/json
   "name": "KAVA coffee roasters",
       "address": "Max-Josef-Platz 23",
       "postcode": "83022",
-      "city": "Rosenheim"
+      "city": "Rosenheim",
+      "lat": "47.8563632",
+      "lng": "	12.1282301"
 }
 
