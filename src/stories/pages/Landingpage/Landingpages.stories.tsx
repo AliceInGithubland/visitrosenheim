@@ -3,7 +3,7 @@ import Landingpage from "./Landingpage";
 
 export default {
   component: "Landingpage",
-  title: "Pages/landingpage",
+  title: "Pages/Landingpage",
   parameters: {
     layout: "fullscreen",
   },
