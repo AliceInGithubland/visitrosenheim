@@ -13,9 +13,7 @@ export default function Map() {
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       <Marker position={[47.856769, 12.127801]}>
-        <Popup>
-          Visit Rosenheim <br />
-        </Popup>
+        <Popup>Visit Rosenheim</Popup>
       </Marker>
     </MapContainer>
   );

@@ -1,5 +1,17 @@
+.container {
+  display: grid;
+  grid-template-rows: 20% 80%;
+}
+
 .map {
-  height: 45em;
-  width: 24.375em;
+  height: 100vh;
+  width: 100vw;
   background-repeat: no-repeat;
+  background-color: #646464;
+}
+
+h1 {
+  font-size: var(--font-size-primary);
+  text-transform: uppercase;
+  font-family: var(--font-text);
 }
