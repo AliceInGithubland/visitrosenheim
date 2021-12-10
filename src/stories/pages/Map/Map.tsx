@@ -4,6 +4,14 @@ import { LatLngExpression } from "leaflet";
 import "leaflet/dist/leaflet.css";
 import styles from "./Map.module.css";
 
+export interface Place {
+  name: string;
+  address: string;
+  postcode: string;
+  city: string;
+  position: LatLngExpression;
+}
+
 const Map = ({ places }) => {
   const defaultPosition: LatLngExpression = [47.85637, 12.1181]; // Rosenheim position
 
