@@ -3,10 +3,7 @@ import Map from "./Map";
 
 export default {
   component: "Map",
-  title: "Pages/Map",
-  parameters: {
-    layout: "fullscreen",
-  },
+  title: "Components/Map",
 };
 
 export const Default = () => <Map />;
