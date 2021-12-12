@@ -44,6 +44,7 @@ export default function Map() {
           </Popup>
         </Marker>
       </MapContainer>
+      <LocationMarker />
     </div>
   );
 }
