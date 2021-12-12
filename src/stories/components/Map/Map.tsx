@@ -5,30 +5,41 @@ import {
   Marker,
   Popup,
   useMapEvents,
+  useMap,
 } from "react-leaflet";
 import styles from "./Map.module.css";
 import "leaflet/dist/leaflet.css";
+import * as L from "leaflet";
+import { LatLng } from "leaflet";
 
-function LocationMarker() {
-  const [position, setPosition] = useState(null);
-  const map = useMapEvents({
-    click() {
-      map.locate();
-    },
+function MapLocator({ position, setPosition }: any) {
+  const map = useMap();
+  const locateAndFly = () => {
+    map.locate({ setView: true, maxZoom: map.getZoom() });
+  };
+
+  useMapEvents({
     locationfound(e) {
       setPosition(e.latlng);
-      map.flyTo(e.latlng, map.getZoom());
     },
   });
 
-  return position === null ? null : (
-    <Marker position={position}>
-      <Popup>You are here! Keep calm and looking for your next ☕place</Popup>
-    </Marker>
+  return (
+    <button
+      className={styles.usersLocationButton}
+      onClick={() => locateAndFly()}
+    >
+      <img src="src/assets/MapLocator.svg" alt="LocationMarker" />
+    </button>
   );
 }
 
 export default function Map() {
+  const [position, setPosition] = useState(new LatLng(0, 0));
+  const currentMarker = new L.Icon({
+    iconAnchor: [23, 53],
+    iconUrl: "src/assets/UsersLocationPin.svg",
+  });
   return (
     <div>
       <MapContainer
@@ -43,11 +54,15 @@ export default function Map() {
             I am Here! <br /> And looking for Coffee
           </Popup>
         </Marker>
+
+        {position && (
+          <Marker icon={currentMarker} position={position}>
+            <Popup>You are here</Popup>
+          </Marker>
+        )}
+
+        <MapLocator position={position} setPosition={setPosition} />
       </MapContainer>
-      <button className={styles.usersLocationButton}>
-        <img src="src/assets/MapLocator.svg" alt="usersLocationButton" />
-      </button>
-      <LocationMarker />
     </div>
   );
 }
