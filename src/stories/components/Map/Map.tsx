@@ -44,6 +44,9 @@ export default function Map() {
           </Popup>
         </Marker>
       </MapContainer>
+      <button className={styles.usersLocationButton}>
+        <img src="src/assets/MapLocator.svg" alt="usersLocationButton" />
+      </button>
       <LocationMarker />
     </div>
   );
