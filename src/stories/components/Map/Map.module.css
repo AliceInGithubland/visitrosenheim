@@ -17,3 +17,8 @@ h1 {
   text-transform: uppercase;
   font-family: var(--font-text);
 }
+
+.usersLocationButton {
+  display: grid;
+  place-items: center;
+}

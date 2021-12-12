@@ -1,6 +1,5 @@
 .detailsCard {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   background-color: var(--color-tabs);
   border-radius: 10px;
   width: 15em;
