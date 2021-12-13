@@ -10,7 +10,7 @@ if (!process.env.MONGODB_URI) {
 
 // setze den port auf process.env.PORT oder 3001
 const app = express();
-const port = process.env.PORT || 3003;
+const port = process.env.PORT || 3001;
 app.use(express.json());
 
 // API routes
@@ -36,6 +36,17 @@ app.post("/api/cafeLocations", async (request, response) => {
 });
 
 // send all other requests to the app
+app.get("*", (_request, response) => {
+  response.sendFile(path.join(__dirname, "../dist/index.html"));
+});
+
+connectDatabase(process.env.MONGODB_URI).then(() =>
+  app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`);
+  })
+);
+
+// Handle client routing, return all requests to the app
 app.get("*", (_request, response) => {
   response.sendFile(path.join(__dirname, "../dist/index.html"));
 });

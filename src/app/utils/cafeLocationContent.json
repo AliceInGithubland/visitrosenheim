@@ -1,6 +1,7 @@
 {
   "cafeLocation": [
     {
+      "id": "0",
       "name": "KAVA coffee roasters",
       "address": "Max-Josef-Platz 23",
       "postcode": "83022",
@@ -10,6 +11,7 @@
     },
 
     {
+      "id": "1",
       "name": "Café INNiG",
       "address": "Innstr. 13",
       "postcode": "83022",
@@ -19,6 +21,7 @@
     },
 
     {
+      "id": "2",
       "name": "Polastudios",
       "address": "Färberstr.1 ",
       "postcode": "83022",
