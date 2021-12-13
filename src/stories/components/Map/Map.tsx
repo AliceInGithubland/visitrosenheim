@@ -12,7 +12,7 @@ import "leaflet/dist/leaflet.css";
 import * as L from "leaflet";
 import { LatLng } from "leaflet";
 
-function MapLocator({ position, setPosition }: any) {
+function MapLocator({ setPosition }: any) {
   const map = useMap();
   const locateAndFly = () => {
     map.locate({ setView: true, maxZoom: map.getZoom() });
@@ -41,7 +41,7 @@ export default function Map() {
     iconUrl: "src/assets/UsersLocationPin.svg",
   });
   return (
-    <div>
+    <div className={styles.container}>
       <MapContainer
         className={styles.map}
         center={[47.856363, 12.12823]}
