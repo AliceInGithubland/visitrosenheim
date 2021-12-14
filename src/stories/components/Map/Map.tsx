@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   MapContainer,
   TileLayer,
@@ -11,6 +11,7 @@ import styles from "./Map.module.css";
 import "leaflet/dist/leaflet.css";
 import * as L from "leaflet";
 import { LatLng } from "leaflet";
+import cafeLocationContent from "../../../app/utils/cafeLocationContent.json";
 
 function MapLocator({ setPosition }: any) {
   const map = useMap();
@@ -40,6 +41,11 @@ export default function Map() {
     iconAnchor: [23, 53],
     iconUrl: "src/assets/UsersLocationPin.svg",
   });
+
+  const filteredCafeLocations = cafeLocationContent.filter(
+    (cafeLocation) => cafeLocationContent.name === "Cafés Rosenheim"
+  );
+
   return (
     <div className={styles.container}>
       <MapContainer
@@ -49,6 +55,20 @@ export default function Map() {
         scrollWheelZoom={false}
       >
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+
+        {cafeLocationContent.map((cafeLocation) => (
+          <Marker
+            key={cafeLocation.id}
+            position={[cafeLocation.lat, cafeLocation.lng]}
+          >
+            <Popup position={[cafeLocation.lat, cafeLocation.lng]}>
+              <h2>{"name: " + cafeLocation.name}</h2>
+              <p>{"address: " + cafeLocation.name}</p>
+              <p>{"postcode: " + cafeLocation.postcode}</p>
+              <p>{"city: " + cafeLocation.city}</p>
+            </Popup>
+          </Marker>
+        ))}
         <Marker position={[47.8563632, 12.1282301]}>
           <Popup>
             I am Here! <br /> And looking for Coffee
