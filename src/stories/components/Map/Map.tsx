@@ -48,6 +48,9 @@ export default function Map() {
 
   return (
     <div className={styles.container}>
+      <div>
+        <h1>Cafés</h1>
+      </div>
       <MapContainer
         className={styles.map}
         center={[47.856363, 12.12823]}
