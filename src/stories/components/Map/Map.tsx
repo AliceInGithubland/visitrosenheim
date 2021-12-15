@@ -72,9 +72,10 @@ export default function Map() {
             </Popup>
           </Marker>
         ))}
+
         <Marker position={[47.8563632, 12.1282301]}>
           <Popup>
-            I am Here! <br /> And looking for Coffee
+            I am Here! <br /> And looking for Coffee ☕!
           </Popup>
         </Marker>
 
