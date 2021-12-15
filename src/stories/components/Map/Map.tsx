@@ -13,7 +13,11 @@ import * as L from "leaflet";
 import { LatLng } from "leaflet";
 import cafeLocationContent from "../../../app/utils/cafeLocationContent.json";
 
-function MapLocator({ setPosition }: any) {
+type MapLocatorProps = {
+  setPosition: (position: LatLng) => void;
+};
+
+function MapLocator({ setPosition }: MapLocatorProps) {
   const map = useMap();
   const locateAndFly = () => {
     map.locate({ setView: true, maxZoom: map.getZoom() });
@@ -58,8 +62,7 @@ export default function Map() {
         scrollWheelZoom={false}
       >
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-
-        {cafeLocationContent.map((cafeLocation) => (
+        {filteredCafeLocations.map((cafeLocation) => (
           <Marker
             key={cafeLocation.id}
             position={[cafeLocation.lat, cafeLocation.lng]}
@@ -72,18 +75,17 @@ export default function Map() {
             </Popup>
           </Marker>
         ))}
+        ;
         <Marker position={[47.8563632, 12.1282301]}>
           <Popup>
             I am Here! <br /> And looking for Coffee
           </Popup>
         </Marker>
-
         {position && (
           <Marker icon={currentMarker} position={position}>
             <Popup>You are here</Popup>
           </Marker>
         )}
-
         <MapLocator position={position} setPosition={setPosition} />
       </MapContainer>
     </div>
