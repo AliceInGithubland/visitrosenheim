@@ -1,33 +1,31 @@
-{
-  "cafeLocation": [
-    {
-      "id": "0",
-      "name": "KAVA coffee roasters",
-      "address": "Max-Josef-Platz 23",
-      "postcode": "83022",
-      "city": "Rosenheim",
-      "lat": "47.8563632",
-      "lng": "12.1282301"
-    },
+[
+  {
+    "id": "0",
+    "name": "KAVA coffee roasters",
+    "address": "Max-Josef-Platz 23",
+    "postcode": "83022",
+    "city": "Rosenheim",
+    "lat": 47.8563632,
+    "lng": 12.1282301
+  },
 
-    {
-      "id": "1",
-      "name": "Café INNiG",
-      "address": "Innstr. 13",
-      "postcode": "83022",
-      "city": "Rosenheim",
-      "lat": "47.855198",
-      "lng": "12.1308692"
-    },
+  {
+    "id": "1",
+    "name": "Café INNiG",
+    "address": "Innstr. 13",
+    "postcode": "83022",
+    "city": "Rosenheim",
+    "lat": 47.855198,
+    "lng": 12.1308692
+  },
 
-    {
-      "id": "2",
-      "name": "Polastudios",
-      "address": "Färberstr.1 ",
-      "postcode": "83022",
-      "city": "Rosenheim",
-      "lat": "47.8564628",
-      "lng": "12.1303539"
-    }
-  ]
-}
+  {
+    "id": "2",
+    "name": "Polastudios",
+    "address": "Färberstr.1 ",
+    "postcode": "83022",
+    "city": "Rosenheim",
+    "lat": 47.8564628,
+    "lng": 12.1303539
+  }
+]

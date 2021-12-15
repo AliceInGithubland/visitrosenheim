@@ -12,5 +12,6 @@ h1 {
 }
 
 .menuecard {
-  width: 100%;
+  width: 100vw;
+  padding: 0%;
 }
