@@ -13,7 +13,11 @@ import * as L from "leaflet";
 import { LatLng } from "leaflet";
 import cafeLocationContent from "../../../app/utils/cafeLocationContent.json";
 
-function MapLocator({ setPosition }: any) {
+type MapLocatorProps = {
+  setPosition: (position: LatLng) => void;
+};
+
+function MapLocator({ setPosition }: MapLocatorProps) {
   const map = useMap();
   const locateAndFly = () => {
     map.locate({ setView: true, maxZoom: map.getZoom() });
