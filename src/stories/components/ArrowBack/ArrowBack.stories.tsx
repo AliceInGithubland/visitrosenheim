@@ -1,10 +1,9 @@
 import React from "react";
-import styles from "./ArrowBack.module.css";
+import ArrowBack from "./ArrowBack.module.css";
 
-export default function ArrowBack() {
-  return (
-    <div className={styles.ArrowBack}>
-      <img src="src/assets/ArrowBack.svg" />
-    </div>
-  );
-}
+export default {
+  component: ArrowBack,
+  title: "Components/ArrowBack",
+};
+
+export const Default = () => <ArrowBack />;
