@@ -1,4 +1,3 @@
-import React from "react";
 import CafeMap from "./CafeMap";
 
 export default {
