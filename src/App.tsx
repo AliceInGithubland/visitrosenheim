@@ -1,10 +1,16 @@
-import "./App.css";
+import styles from "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Landingpage from "./stories/pages/Landingpage/Landingpage";
+import CafeMap from "./stories/pages/CafeMap/CafeMap";
 
 function App() {
   return (
-    <>
-      <h1>Hello World</h1>
-    </>
+    <div>
+      <Routes>
+        <Route path="/" element={<Landingpage />}></Route>
+        <Route path="/CafeMap" element={<CafeMap />}></Route>
+      </Routes>
+    </div>
   );
 }
 

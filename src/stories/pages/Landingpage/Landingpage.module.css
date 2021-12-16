@@ -1,7 +1,8 @@
 .container {
   display: grid;
   grid-template-rows: 20% 80%;
-  justify-items: center;
+  justify-items: absolute;
+  position: fixed;
   padding: 0;
   height: 100vh;
 }

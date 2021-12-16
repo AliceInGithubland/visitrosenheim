@@ -47,7 +47,7 @@ export default function Map() {
   });
 
   const filteredCafeLocations = cafeLocationContent.filter(
-    (cafeLocation) => cafeLocationContent.name === "Cafés Rosenheim"
+    (cafeLocation) => cafeLocation.name === "Cafés Rosenheim"
   );
 
   return (
@@ -69,7 +69,7 @@ export default function Map() {
           >
             <Popup position={[cafeLocation.lat, cafeLocation.lng]}>
               <h2>{"name: " + cafeLocation.name}</h2>
-              <p>{"address: " + cafeLocation.name}</p>
+              <p>{"address: " + cafeLocation.address}</p>
               <p>{"postcode: " + cafeLocation.postcode}</p>
               <p>{"city: " + cafeLocation.city}</p>
             </Popup>
@@ -86,7 +86,7 @@ export default function Map() {
             <Popup>You are here</Popup>
           </Marker>
         )}
-        <MapLocator position={position} setPosition={setPosition} />
+        <MapLocator setPosition={setPosition} />
       </MapContainer>
     </div>
   );
