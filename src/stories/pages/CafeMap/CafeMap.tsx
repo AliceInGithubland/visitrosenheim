@@ -8,7 +8,6 @@ export default function CafeMap() {
       <Map />
       <ArrowBack />
       <X />
-      <h1>Café</h1>
     </div>
   );
 }
