@@ -12,6 +12,7 @@ import "leaflet/dist/leaflet.css";
 import * as L from "leaflet";
 import { LatLng } from "leaflet";
 import cafeLocationContent from "../../../app/utils/cafeLocationContent.json";
+import iconMarker from "../../../assets/UsersLocationPin.svg";
 
 type MapLocatorProps = {
   setPosition: (position: LatLng) => void;
@@ -43,7 +44,7 @@ export default function Map() {
   const [position, setPosition] = useState(new LatLng(0, 0));
   const currentMarker = new L.Icon({
     iconAnchor: [23, 53],
-    iconUrl: "src/assets/UsersLocationPin.svg",
+    iconUrl: iconMarker,
   });
 
   const filteredCafeLocations = cafeLocationContent.filter(
@@ -62,8 +63,9 @@ export default function Map() {
         scrollWheelZoom={false}
       >
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-        {filteredCafeLocations.map((cafeLocation) => (
+        {filteredCafeLocations?.map((cafeLocation) => (
           <Marker
+            icon={currentMarker}
             key={cafeLocation.id}
             position={[cafeLocation.lat, cafeLocation.lng]}
           >
@@ -75,8 +77,7 @@ export default function Map() {
             </Popup>
           </Marker>
         ))}
-        ;
-        <Marker position={[47.8563632, 12.1282301]}>
+        <Marker icon={currentMarker} position={[47.8563632, 12.1282301]}>
           <Popup>
             I am Here! <br /> And looking for Coffee
           </Popup>
