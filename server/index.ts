@@ -45,14 +45,3 @@ connectDatabase(process.env.MONGODB_URI).then(() =>
     console.log(`Example app listening at http://localhost:${port}`);
   })
 );
-
-// Handle client routing, return all requests to the app
-app.get("*", (_request, response) => {
-  response.sendFile(path.join(__dirname, "../dist/index.html"));
-});
-
-connectDatabase(process.env.MONGODB_URI).then(() =>
-  app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
-  })
-);
