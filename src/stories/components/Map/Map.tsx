@@ -13,6 +13,7 @@ import * as L from "leaflet";
 import { LatLng } from "leaflet";
 import cafeLocationContent from "../../../app/utils/cafeLocationContent.json";
 import iconMarker from "../../../assets/UsersLocationPin.svg";
+import mapLocatorCurrentPosition from "../../../assets/MapLocator.svg";
 
 type MapLocatorProps = {
   setPosition: (position: LatLng) => void;
@@ -35,7 +36,7 @@ function MapLocator({ setPosition }: MapLocatorProps) {
       className={styles.usersLocationButton}
       onClick={() => locateAndFly()}
     >
-      <img src="src/assets/MapLocator.svg" alt="LocationMarker" />
+      <img src={mapLocatorCurrentPosition} alt="LocationMarker" />
     </button>
   );
 }
