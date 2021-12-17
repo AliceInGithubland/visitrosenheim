@@ -36,7 +36,7 @@ function MapLocator({ setPosition }: MapLocatorProps) {
       className={styles.usersLocationButton}
       onClick={() => locateAndFly()}
     >
-      <img src="src/assets/MapLocator.svg" alt="LocationMarker" />
+      <img src={mapLocatorCurrentPosition} alt="LocationMarker" />
     </button>
   );
 }
