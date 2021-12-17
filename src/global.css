@@ -36,4 +36,6 @@ h1 {
   font-size: var(--font-size-primary);
   text-transform: uppercase;
   font-family: var(--font-text);
+  margin: 0;
+  padding: 0;
 }
