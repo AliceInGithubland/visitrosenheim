@@ -13,6 +13,7 @@ import * as L from "leaflet";
 import { LatLng } from "leaflet";
 import cafeLocationContent from "../../../app/utils/cafeLocationContent.json";
 import iconMarker from "../../../assets/UsersLocationPin.svg";
+import arrowbackIcon from "../../../assets/ArrowBack.svg";
 
 type MapLocatorProps = {
   setPosition: (position: LatLng) => void;
@@ -53,7 +54,8 @@ export default function Map() {
 
   return (
     <div className={styles.container}>
-      <div>
+      <div className={styles.arrow}>
+        <img src={arrowbackIcon} />
         <h1>Cafés</h1>
       </div>
       <MapContainer
@@ -62,7 +64,10 @@ export default function Map() {
         zoom={20}
         scrollWheelZoom={false}
       >
-        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
         {filteredCafeLocations?.map((cafeLocation) => (
           <Marker
             icon={currentMarker}
@@ -70,18 +75,20 @@ export default function Map() {
             position={[cafeLocation.lat, cafeLocation.lng]}
           >
             <Popup position={[cafeLocation.lat, cafeLocation.lng]}>
-              <h2>{"name: " + cafeLocation.name}</h2>
-              <p>{"address: " + cafeLocation.address}</p>
-              <p>{"postcode: " + cafeLocation.postcode}</p>
-              <p>{"city: " + cafeLocation.city}</p>
+              <h2>{cafeLocation.name}</h2>
+              <p>{cafeLocation.address}</p>
+              <p>{cafeLocation.postcode}</p>
+              <p>{cafeLocation.city}</p>
             </Popup>
           </Marker>
         ))}
+
         <Marker icon={currentMarker} position={[47.8563632, 12.1282301]}>
           <Popup>
             I am Here! <br /> And looking for Coffee
           </Popup>
         </Marker>
+
         {position && (
           <Marker icon={currentMarker} position={position}>
             <Popup>You are here</Popup>
