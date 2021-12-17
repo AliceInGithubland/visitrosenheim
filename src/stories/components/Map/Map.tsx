@@ -15,6 +15,7 @@ import cafeLocationContent from "../../../app/utils/cafeLocationContent.json";
 import iconMarker from "../../../assets/UsersLocationPin.svg";
 import arrowbackIcon from "../../../assets/ArrowBack.svg";
 
+
 type MapLocatorProps = {
   setPosition: (position: LatLng) => void;
 };
