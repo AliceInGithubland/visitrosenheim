@@ -14,6 +14,7 @@ import { LatLng } from "leaflet";
 import cafeLocationContent from "../../../app/utils/cafeLocationContent.json";
 import iconMarker from "../../../assets/UsersLocationPin.svg";
 import arrowbackIcon from "../../../assets/ArrowBack.svg";
+import mapLocator from "../../../assets/MapLocator.svg";
 
 type MapLocatorProps = {
   setPosition: (position: LatLng) => void;
@@ -36,7 +37,7 @@ function MapLocator({ setPosition }: MapLocatorProps) {
       className={styles.usersLocationButton}
       onClick={() => locateAndFly()}
     >
-      <img src={mapLocatorCurrentPosition} alt="LocationMarker" />
+      <img src={mapLocator} alt="LocationMarker" />
     </button>
   );
 }
@@ -83,9 +84,31 @@ export default function Map() {
           </Marker>
         ))}
 
+        <Marker icon={currentMarker} position={[47.855721, 12.126823]}>
+          <Popup>
+            You are here <br />
+            Looking for coffee ☕
+          </Popup>
+        </Marker>
+
+        <Marker icon={currentMarker} position={[47.855198, 12.1308692]}>
+          <Popup>
+            Café INNig <br />
+            Innstr. 13 <br />
+            83022 Rosenheim
+          </Popup>
+        </Marker>
+
         <Marker icon={currentMarker} position={[47.8563632, 12.1282301]}>
           <Popup>
-            I am Here! <br /> And looking for Coffee
+            KAVA coffee roasters <br /> Max-Josef-Platz 23 <br /> 83022
+            Rosenheim
+          </Popup>
+        </Marker>
+
+        <Marker icon={currentMarker} position={[47.8564628, 12.1303539]}>
+          <Popup>
+            Polastudios <br /> Färberstr.1 <br /> 83022 Rosenheim
           </Popup>
         </Marker>
 
