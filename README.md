@@ -1,11 +1,7 @@
 # Vite Boilerplate
 
-> Quickly bootstrap a new project with Vite Boilerplate.
-
-This boilerplate contains all the tools you need to build a modern web app with TypeScript, React, Vite, Storybook and Express.  
-You can use it to quickly bootstrap your project.
-
-ESLint, stylelint, prettier, husky and lintstaged are configured to give you a solid development experience.
+Visit Rosenheim - a interactive city-app
+Track your location, check the cafes in your area on the map and espressi yourself!
 
 ## Installing / Developing
 
@@ -70,5 +66,3 @@ In production, you have a single server serving everything.
 A test runner is not installed (right now). But TypeScript, linter and prettier are checked on commit and push thanks to husky and lintstaged.
 
 ## Licensing
-
-MIT
